@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Room Chat</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="room-container">
+        <div class="h1"><h1>Join Private Chat Room</h1></div>
+        <input type="text" id="room" placeholder="Enter room ID" />
+        <input type="password" id="key" placeholder="Enter encryption key" />
+        <input type="text" id="username" placeholder="Enter username" />
+        <div class="joinroom"><button id="joinBtn">Join Room</button></div>
+    </div>
+
+    <div id="chat-container" class="hidden">
+        <div id="header">
+            <span id="room-name"></span>
+            <button id="darkToggle">🌓 Change Theme</button>
+        </div>
+        <div id="user-list"></div>
+        <div id="messages"></div>
+        <div id="typing-status"></div>
+        <div id="input-container">
+            <emoji-picker style="display:none;"></emoji-picker>
+            <input type="text"  id="message" placeholder="Type your message..." />
+            <button id="emojiBtn">😊</button>
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
